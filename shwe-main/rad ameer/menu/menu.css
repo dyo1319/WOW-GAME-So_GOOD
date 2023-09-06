@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body{
+  background: url(back.jpg) center/cover no-repeat fixed;
+  }
+  #conatin{
+    position: absolute;
+    left:27%;
+    top:10%;
+
+    width: 810px;
+    height: 700px;
+  }
+  #gamename{
+    
+    position: absolute;
+    top:0px;
+    left:175px;
+    height: 80px;
+    width: 520px;
+    text-align: center;
+    font-size: 50px;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+     background-color: white;
+       color: aqua;
+        border:black solid 2px;
+        background-color:#111 ; 
+        border-radius: 15px;
+        animation: animate 1s linear infinite;
+        box-shadow: 0 0 50px green ,
+                    0 0 50px deepskyblue;
+      }
+      @keyframes animate{
+        0%{
+            filter :hue-rotate(0deg);
+        }
+        100%{
+            filter: hue-rotate(360deg);
+        }
+      }
+  
+#s{
+    left: 300px;
+   top: 160px;
+   position: absolute;
+}
+#resetScores{
+    position: absolute;
+  top: 394px;
+  left: 150px;
+}
+.lastscore{
+    position: absolute;
+    top: 280px;
+    left: 0px;
+}
+.bestscore{
+    position: absolute;
+    top: 280px;
+    right: 3px;
+}
+#wheelload{
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+}
+button{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    color:rgb(86, 173, 35);
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    border: solid 4px black;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 70px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+  
+  button:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+  }
+  
+  button svg {
+    transition: all .5s ease;
+    z-index: 2;
+  }
+  
+  .play {
+    transition: all .5s ease;
+    transition-delay: 300ms;
+  }
+  
+  button:hover svg {
+    transform: scale(3) translate(50%);
+  }
+  
+  .now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 2;
+  }
+  
+  button:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+  }
+  
+  button:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+  }
+
+  #nn{
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 40px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+  }
+  
+  .nn{
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 40px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+  }
+  
+  #nn:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  #nn:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+
+.wheel {
+  fill: rgb(128, 128, 128);
+  font-size: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 6em;
+  text-align: center;
+  animation: rolling 1s linear infinite;
+}
+
+#rim {
+  fill: rgb(86, 173, 35);
+}
+
+#tire {
+  fill: rgb(55, 55, 55);
+}
+
+.road {
+  position: absolute;
+  
+  margin-top: -4px;
+  width: 250px;
+  height: 15px;
+  border-radius: 5em;
+  background-color: rgb(55, 55, 55);
+  animation: road-move 2s linear infinite;
+}
+
+@keyframes rolling {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes road-move {
+  from {
+
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(5%);
+  }
+}
